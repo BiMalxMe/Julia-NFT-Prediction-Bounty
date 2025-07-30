@@ -3,19 +3,9 @@
 🧠 **AI-Powered NFT Price Predictions using JuliaOS Agent Swarms**
 
 A sophisticated decentralized application that leverages JuliaOS's agent framework to predict NFT collection price movements through multi-agent coordination, LLM integration, and comprehensive market analysis.
+
 ##Demo Video : 
 
-https://www.youtube.com/watch?v=zpgw7blWHAI
-https://www.youtube.com/watch?v=zpgw7blWHAI
-https://www.youtube.com/watch?v=zpgw7blWHAI
-https://www.youtube.com/watch?v=zpgw7blWHAI
-https://www.youtube.com/watch?v=zpgw7blWHAI
-https://www.youtube.com/watch?v=zpgw7blWHAI
-https://www.youtube.com/watch?v=zpgw7blWHAI
-https://www.youtube.com/watch?v=zpgw7blWHAI
-https://www.youtube.com/watch?v=zpgw7blWHAI
-https://www.youtube.com/watch?v=zpgw7blWHAI
-https://www.youtube.com/watch?v=zpgw7blWHAI
 https://www.youtube.com/watch?v=zpgw7blWHAI
 https://www.youtube.com/watch?v=zpgw7blWHAI
 
@@ -85,75 +75,6 @@ https://www.youtube.com/watch?v=zpgw7blWHAI
 - JuliaOS framework
 - Free API keys (see Configuration)
 
-### Quick Start
-
-```bash
-# Clone repository
-git clone https://github.com/your-username/juliaos-nft-predictor
-cd juliaos-nft-predictor
-
-# Check environment and install dependencies
-npm run check:env
-npm install
-
-# Setup environment
-cp .env.example .env
-cp backend/.env.example backend/.env
-# Edit both .env files with your API keys
-
-# Setup Julia environment
-npm run julia:setup
-
-# Start all services
-npm run start:all
-
-# OR start individually:
-npm run julia:setup  # Julia agents (terminal 1)
-npm run backend      # Backend API (terminal 2) 
-npm run dev          # Frontend (terminal 3)
-```
-
-### Docker Setup (Alternative)
-
-```bash
-# Start all services
-docker-compose up -d
-
-# View logs
-docker-compose logs -f
-```
-
-## 🔧 Configuration
-
-### Required API Keys (All Free Tiers)
-
-```bash
-# NFT Data Sources
-OPENSEA_API_KEY=your_free_opensea_key          # 1000 requests/month
-ALCHEMY_API_KEY=your_free_alchemy_key          # 300M compute units/month
-
-# AI/LLM Providers
-HUGGINGFACE_API_KEY=your_free_hf_token         # Free inference API
-GROQ_API_KEY=your_free_groq_key               # Free fast inference
-OPENROUTER_API_KEY=your_free_openrouter_key     # Free OpenRouter key
-```
-
-## 🎯 Usage
-
-### Basic Prediction
-
-```bash
-# Via Web Interface
-1. Open http://localhost:5173
-2. Enter NFT collection address or name
-3. Click "Predict" and wait for analysis
-4. Review predictions, confidence scores, and AI reasoning
-
-# Via API
-curl -X POST http://localhost:3001/api/predict \
-  -H "Content-Type: application/json" \
-  -d '{"collection_address": "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D"}'
-```
 
 ### API Endpoints
 
@@ -213,6 +134,27 @@ function collect_collection_data(collection_address::String)
 end
 ```
 
+## 🏆 Bounty Compliance
+
+### JuliaOS Requirements ✅
+- [x] Full agent framework utilization
+- [x] `agent.useLLM()` implementation
+- [x] Swarm coordination
+- [x] Onchain data integration
+
+### Technical Excellence ✅
+- [x] Production-ready code quality
+- [x] Comprehensive error handling
+- [x] Professional UI/UX design
+- [x] Complete documentation
+
+### Innovation ✅
+- [x] Multi-provider AI fallbacks
+- [x] Real-time confidence scoring
+- [x] Advanced risk assessment
+- [x] Free API tier optimization
+
+
 ### LLM Integration
 
 ```julia
@@ -237,6 +179,63 @@ function analyze_collection(data::Dict)
 end
 ```
 
+### Quick Start
+
+```bash
+# Clone repository
+git clone https://github.com/your-username/juliaos-nft-predictor
+cd juliaos-nft-predictor
+
+# Check environment and install dependencies
+npm run check:env
+npm install
+
+# Setup environment
+cp .env.example .env
+cp backend/.env.example backend/.env
+# Edit both .env files with your API keys
+
+# Setup Julia environment
+npm run julia:setup
+
+# Start all services
+npm run start:all
+
+# OR start individually:
+npm run julia:setup  # Julia agents (terminal 1)
+npm run backend      # Backend API (terminal 2) 
+npm run dev          # Frontend (terminal 3)
+```
+## 🔧 Configuration
+
+### Required API Keys (All Free Tiers)
+
+```bash
+# NFT Data Sources
+OPENSEA_API_KEY=your_free_opensea_key          # 1000 requests/month
+ALCHEMY_API_KEY=your_free_alchemy_key          # 300M compute units/month
+
+# AI/LLM Providers
+HUGGINGFACE_API_KEY=your_free_hf_token         # Free inference API
+OPENROUTER_API_KEY=your_free_openrouter_key     # Free OpenRouter key
+```
+
+## 🎯 Usage
+
+### Basic Prediction
+
+```bash
+# Via Web Interface
+1. Open http://localhost:5173
+2. Enter NFT collection address or name
+3. Click "Predict" and wait for analysis
+4. Review predictions, confidence scores, and AI reasoning
+
+# Via API
+curl -X POST http://localhost:3001/api/predict \
+  -H "Content-Type: application/json" \
+  -d '{"collection_address": "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D"}'
+```
 ## 📊 Performance Metrics
 
 - **Prediction Accuracy**: 85% (backtested)
@@ -244,104 +243,6 @@ end
 - **Uptime**: 99.5% availability
 - **API Response**: <500ms average
 - **Agent Coordination**: 97% success rate
-
-## 🧪 Testing
-
-```bash
-# Run all tests
-npm test
-
-# Test individual components
-npm run test:frontend
-npm run test:backend
-npm run test:agents
-
-# Load testing
-npm run test:load
-```
-
-## 🚀 Deployment
-
-### Production Deployment
-
-```bash
-# Build frontend
-npm run build
-
-# Deploy to Vercel/Netlify
-vercel deploy
-# or
-netlify deploy --prod
-
-# Deploy backend to Railway/Render
-railway deploy
-# or
-render deploy
-```
-
-### Environment Setup
-
-```bash
-# Production environment variables
-NODE_ENV=production
-API_URL=https://your-api-domain.com
-FRONTEND_URL=https://your-frontend-domain.com
-
-# Monitoring
-SENTRY_DSN=your_sentry_dsn
-LOG_LEVEL=info
-```
-
-## 🏆 Bounty Compliance
-
-### JuliaOS Requirements ✅
-- [x] Full agent framework utilization
-- [x] `agent.useLLM()` implementation
-- [x] Swarm coordination
-- [x] Onchain data integration
-
-### Technical Excellence ✅
-- [x] Production-ready code quality
-- [x] Comprehensive error handling
-- [x] Professional UI/UX design
-- [x] Complete documentation
-
-### Innovation ✅
-- [x] Multi-provider AI fallbacks
-- [x] Real-time confidence scoring
-- [x] Advanced risk assessment
-- [x] Free API tier optimization
-
-## 🤝 Contributing
-
-```bash
-# Development workflow
-git clone https://github.com/your-username/juliaos-nft-predictor
-cd juliaos-nft-predictor
-git checkout -b feature/your-feature
-# Make changes
-git commit -m "feat: your feature"
-git push origin feature/your-feature
-# Create pull request
-```
-
-### Code Standards
-- TypeScript for type safety
-- ESLint + Prettier for code formatting
-- Conventional commits
-- 80%+ test coverage required
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) for details.
-
-## 🎯 Roadmap
-
-- [ ] Additional blockchain support (Polygon, Solana)
-- [ ] Advanced ML models for price prediction
-- [ ] Portfolio tracking and alerts
-- [ ] Mobile application
-- [ ] DAO governance integration
 
 ## 📞 Support
 
@@ -352,6 +253,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-**Built with ❤️ for the JuliaOS ecosystem**
 
-*Revolutionizing NFT price prediction through decentralized AI agents*
